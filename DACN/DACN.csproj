@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24498553-3E75-4DBF-9775-DBE71EDB7BDF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DACN</RootNamespace>
+    <AssemblyName>DACN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.Dapper.Plus, Version=3.0.30.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.3.0.30\lib\net45\Z.Dapper.Plus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClassExcelFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClassExcelFile.Designer.cs">
+      <DependentUpon>AddClassExcelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourseExcelFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourseExcelFile.Designer.cs">
+      <DependentUpon>AddCourseExcelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLecturerExcelFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLecturerExcelFile.Designer.cs">
+      <DependentUpon>AddLecturerExcelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOneClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOneClass.Designer.cs">
+      <DependentUpon>AddOneClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOneCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOneCourse.Designer.cs">
+      <DependentUpon>AddOneCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOneLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOneLecturer.Designer.cs">
+      <DependentUpon>AddOneLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOneRegistrationCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOneRegistrationCourse.Designer.cs">
+      <DependentUpon>AddOneRegistrationCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOneStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOneStudent.Designer.cs">
+      <DependentUpon>AddOneStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOneSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOneSubject.Designer.cs">
+      <DependentUpon>AddOneSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentExcelFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentExcelFile.Designer.cs">
+      <DependentUpon>AddStudentExcelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubjectExcelFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubjectExcelFile.Designer.cs">
+      <DependentUpon>AddSubjectExcelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.cs" />
+    <Compile Include="AttendanceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassInfo.Designer.cs">
+      <DependentUpon>ClassInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassList.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="CourseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CourseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseInfo.Designer.cs">
+      <DependentUpon>CourseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DACNDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DACNDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DACNDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DACNDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DACNDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DACNDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DACNDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DACNDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DACNDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DACNDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ImportClassExcelFile.cs" />
+    <Compile Include="ImportCourseExcelFile.cs" />
+    <Compile Include="ImportLecturerExcelFile.cs" />
+    <Compile Include="AddRegistrationCourseExcelFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRegistrationCourseExcelFile.Designer.cs">
+      <DependentUpon>AddRegistrationCourseExcelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRegistrationCourseExcelFile.cs" />
+    <Compile Include="ImportStudentExcelFile.cs" />
+    <Compile Include="ImportSubjectExcelFile.cs" />
+    <Compile Include="Lecturer.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="LecturerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerInfo.Designer.cs">
+      <DependentUpon>LecturerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAttendanceForm.Designer.cs">
+      <DependentUpon>ManageAttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageClassListsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageClassListsForm.Designer.cs">
+      <DependentUpon>ManageClassListsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCourseForm.Designer.cs">
+      <DependentUpon>ManageCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageLecturersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageLecturersForm.Designer.cs">
+      <DependentUpon>ManageLecturersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRegistrationCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRegistrationCourseForm.Designer.cs">
+      <DependentUpon>ManageRegistrationCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStudentsForm.Designer.cs">
+      <DependentUpon>ManageStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSubjectForm.Designer.cs">
+      <DependentUpon>ManageSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationCourse.cs" />
+    <Compile Include="RegistrationCourseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationCourseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationCourseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationCourseInfo.Designer.cs">
+      <DependentUpon>RegistrationCourseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInfo.Designer.cs">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs" />
+    <Compile Include="SubjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectInfo.Designer.cs">
+      <DependentUpon>SubjectInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddClassExcelFile.resx">
+      <DependentUpon>AddClassExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCourseExcelFile.resx">
+      <DependentUpon>AddCourseExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLecturerExcelFile.resx">
+      <DependentUpon>AddLecturerExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOneClass.resx">
+      <DependentUpon>AddOneClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOneCourse.resx">
+      <DependentUpon>AddOneCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOneLecturer.resx">
+      <DependentUpon>AddOneLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOneRegistrationCourse.resx">
+      <DependentUpon>AddOneRegistrationCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOneStudent.resx">
+      <DependentUpon>AddOneStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOneSubject.resx">
+      <DependentUpon>AddOneSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegistrationCourseExcelFile.resx">
+      <DependentUpon>AddRegistrationCourseExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentExcelFile.resx">
+      <DependentUpon>AddStudentExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubjectExcelFile.resx">
+      <DependentUpon>AddSubjectExcelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassInfo.resx">
+      <DependentUpon>ClassInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseInfo.resx">
+      <DependentUpon>CourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerInfo.resx">
+      <DependentUpon>LecturerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAttendanceForm.resx">
+      <DependentUpon>ManageAttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageClassListsForm.resx">
+      <DependentUpon>ManageClassListsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCourseForm.resx">
+      <DependentUpon>ManageCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageLecturersForm.resx">
+      <DependentUpon>ManageLecturersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRegistrationCourseForm.resx">
+      <DependentUpon>ManageRegistrationCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStudentsForm.resx">
+      <DependentUpon>ManageStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSubjectForm.resx">
+      <DependentUpon>ManageSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistrationCourseInfo.resx">
+      <DependentUpon>RegistrationCourseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInfo.resx">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectInfo.resx">
+      <DependentUpon>SubjectInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AttendanceDataSet.xsc">
+      <DependentUpon>AttendanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AttendanceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AttendanceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AttendanceDataSet.xss">
+      <DependentUpon>AttendanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseDataSet.xsc">
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CourseDataSet.xss">
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseDataSet1.xsc">
+      <DependentUpon>CourseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CourseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CourseDataSet1.xss">
+      <DependentUpon>CourseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet12.xsc">
+      <DependentUpon>DACNDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DACNDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DACNDataSet12.xss">
+      <DependentUpon>DACNDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet22.xsc">
+      <DependentUpon>DACNDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DACNDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DACNDataSet22.xss">
+      <DependentUpon>DACNDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet3.xsc">
+      <DependentUpon>DACNDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DACNDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DACNDataSet3.xss">
+      <DependentUpon>DACNDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet31.xsc">
+      <DependentUpon>DACNDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DACNDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DACNDataSet31.xss">
+      <DependentUpon>DACNDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet4.xsc">
+      <DependentUpon>DACNDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DACNDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DACNDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DACNDataSet4.xss">
+      <DependentUpon>DACNDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RegistrationCourseDataSet.xsc">
+      <DependentUpon>RegistrationCourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegistrationCourseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistrationCourseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegistrationCourseDataSet.xss">
+      <DependentUpon>RegistrationCourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SubjectDataSet.xsc">
+      <DependentUpon>SubjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SubjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SubjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SubjectDataSet.xss">
+      <DependentUpon>SubjectDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
